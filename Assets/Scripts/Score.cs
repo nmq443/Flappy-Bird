@@ -12,7 +12,7 @@ public class Score : MonoBehaviour
         scoreText = GetComponent<Text>();
     }
     public void setPoint(int point) {
-        scoreText.text = point.ToString();
+        scoreText.text = "Point: " + point.ToString();
     }
 
     public void setHighestPoint(int highestPoint) {

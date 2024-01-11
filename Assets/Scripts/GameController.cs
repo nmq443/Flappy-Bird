@@ -34,8 +34,10 @@ public class GameController : MonoBehaviour
     {
         if (gameState == GameState.End) {
             // stop all pipes
-            for (int i = 0; i < pipes.Count; ++i)
+            for (int i = 0; i < pipes.Count; ++i) {
                 pipes[i].stopPipe();
+                pipes[i].gameObject.SetActive(false);
+            }
             
             // reset point
             PlayerController.resetPoint();
